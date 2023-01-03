@@ -1,6 +1,6 @@
 package io.github.saswesley.localizacao;
 
-import javax.transaction.Transactional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import io.github.saswesley.localizacao.domain.entity.Cidade;
 import io.github.saswesley.localizacao.domain.repository.CidadeRepository;
+import jakarta.transaction.Transactional;
 
 
 @SpringBootApplication
@@ -19,8 +20,6 @@ public class LocalizacaoApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Inicializado!");
-		salvarCidade();
 		listarCidades();
 	}
 	
